@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side - Text input -->
+        <div class="input-section">
+            <div class="input-container">
+                <h2>Send to Assistant</h2>
+                <textarea id="messageInput" placeholder="Type your input here to get AI assistance..." rows="4"></textarea>
+                <div class="button-container">
+                    <button id="sendButton">Send to Assistant</button>
+                    <button id="resetButton" class="reset-btn">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Chat modal -->
+        <div class="chat-section">
+            <div class="chat-modal">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <div class="chat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <span>Autodesk Assistant</span>
+                    </div>
+                    <div class="chat-controls">
+                        <button class="control-btn minimize-btn">—</button>
+                        <button class="control-btn close-btn">×</button>
+                    </div>
+                </div>
+                
+                <div class="chat-content">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+                    
+                    <div class="chat-input-area">
+                        <div class="chat-input-container">
+                            <input type="text" id="chatInput" placeholder="Rephrase or ask another question" disabled>
+                            <button id="chatSendButton" disabled>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
