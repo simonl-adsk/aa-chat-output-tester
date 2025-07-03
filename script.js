@@ -92,14 +92,18 @@ Examples   ▼</div>
         const responseMessage = document.createElement('div');
         responseMessage.className = 'message assistant-message';
         
-        // Display only the input text, preserving formatting
-        const formattedInput = inputText.trim();
+        // Display only the input text, preserving all formatting including numbers
+        const formattedInput = inputText;
 
         responseMessage.innerHTML = `
             <div class="message-content">
-                <div class="message-text">${formattedInput}</div>
+                <div class="message-text"></div>
             </div>
         `;
+        
+        // Set the text content directly to preserve all characters
+        const textDiv = responseMessage.querySelector('.message-text');
+        textDiv.textContent = formattedInput;
 
         chatMessages.appendChild(responseMessage);
         chatMessages.scrollTop = chatMessages.scrollHeight;
